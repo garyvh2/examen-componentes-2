@@ -8,9 +8,9 @@
 <body>
 	<h2>Información</h2>
 	<p th:text="'Id: '					+ ${finca.Id}" />
-	<p th:text="'Cedula: ' 				+ ${finca.Nombre}" />
-	<p th:text="'Empresa: ' 			+ ${finca.Descripcion}" />
-	<a href="/finca">Ingresar un nuevo valor</a>
-	<a href="/finca/list"></a>
+	<p th:text="'Nombre ' 				+ ${finca.Nombre}" />
+	<p th:text="'Descipción ' 			+ ${finca.Descripcion}" />
+	<a href="/finca">Ingresar una nueva finca</a>
+	<a href="/finca/list">Ver fincas registradas</a>
 </body>
 </html>
