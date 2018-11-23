@@ -4,74 +4,64 @@ import org.springframework.data.annotation.Id;
 
 public class Productor {
 	@Id
-	private String Id;
-	private String Cedula;
-	private String Empresa;
-	private String Nombre;
-	private String Provincia;
-	private String Canton;
-	private String Distrito;
-	private String DireccionNominal;
+	private String id;
+	private String cedula;
+	private String empresa;
+	private String nombre;
+	private String provincia;
+	private String canton;
+	private String distrito;
+	private String direccionNominal;
 	// Constructores
 	public Productor() {}
-	public Productor(String id, String cedula, String empresa, String nombre, String provincia, String canton, String distrito, String direccionNominal) {
-		Id = id;
-		Cedula = cedula;
-		Empresa = empresa;
-		Nombre = nombre;
-		Provincia = provincia;
-		Canton = canton;
-		Distrito = distrito;
-		DireccionNominal = direccionNominal;
-	}
-
 	// Getters & Setters
 	public String getId() {
-		return Id;
+		return id;
 	}
 	public void setId(String id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getCedula() {
-		return Cedula;
+		return cedula;
 	}
 	public void setCedula(String cedula) {
-		Cedula = cedula;
+		this.cedula = cedula;
 	}
 	public String getEmpresa() {
-		return Empresa;
+		return empresa;
 	}
 	public void setEmpresa(String empresa) {
-		Empresa = empresa;
+		this.empresa = empresa;
 	}
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		this.nombre = nombre;
 	}
 	public String getProvincia() {
-		return Provincia;
+		return provincia;
 	}
 	public void setProvincia(String provincia) {
-		Provincia = provincia;
+		this.provincia = provincia;
 	}
 	public String getCanton() {
-		return Canton;
+		return canton;
 	}
 	public void setCanton(String canton) {
-		Canton = canton;
+		this.canton = canton;
 	}
 	public String getDistrito() {
-		return Distrito;
+		return distrito;
 	}
 	public void setDistrito(String distrito) {
-		Distrito = distrito;
+		this.distrito = distrito;
 	}
 	public String getDireccionNominal() {
-		return DireccionNominal;
+		return direccionNominal;
 	}
 	public void setDireccionNominal(String direccionNominal) {
-		DireccionNominal = direccionNominal;
+		this.direccionNominal = direccionNominal;
 	}
+	
 }

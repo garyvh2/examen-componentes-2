@@ -6,7 +6,9 @@
 <title>Productor</title>
 </head>
 <body>
-	<h2>Información</h2>
+	<h2>Informacion</h2>
+	<a href="/">Home</a>
+	<a href="/productor/list">Lista de productores</a>
 	<p th:text="'Id: '					+ ${productor.id}" />
 	<p th:text="'Cedula: ' 				+ ${productor.cedula}" />
 	<p th:text="'Empresa: ' 			+ ${productor.empresa}" />
@@ -15,8 +17,5 @@
 	<p th:text="'Canton: ' 				+ ${productor.canton}" />
 	<p th:text="'Distrito: ' 			+ ${productor.distrito}" />
 	<p th:text="'Direccion Nominal: ' 	+ ${productor.direccionNominal}" />
-	<a href="/productor">Ingresar un nuevo valor</a>
-	<a href="/productor/list">Lista de productores</a>
-	<a href="/">Home</a>
 </body>
 </html>
