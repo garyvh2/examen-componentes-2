@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.cenfotec.exam.domain.Finca;
 import com.cenfotec.exam.repository.FincaRepository;
 
@@ -15,13 +13,7 @@ import com.cenfotec.exam.repository.FincaRepository;
 public class FincaController {
 	@Autowired
 	FincaRepository fincaRepository;
-	/**
-	 * Index
-	 */
-	@RequestMapping("/")
-	public String index() {
-		return "index";
-	}
+	
 	/**
 	 * Get the Form View
 	 */
