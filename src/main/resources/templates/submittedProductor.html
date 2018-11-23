@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Submitted Productor</title>
+</head>
+<body>
+	<h2>Informacion</h2>
+	<p th:text="'Id: '					+ ${productor.Id}" />
+	<p th:text="'Cedula: ' 				+ ${productor.Cedula}" />
+	<p th:text="'Empresa: ' 			+ ${productor.Empresa}" />
+	<p th:text="'Nombre: ' 				+ ${productor.Nombre}" />
+	<p th:text="'Provincia: ' 			+ ${productor.Provincia}" />
+	<p th:text="'Canton: ' 				+ ${productor.Canton}" />
+	<p th:text="'Distrito: ' 			+ ${productor.Distrito}" />
+	<p th:text="'Direccion Nominal: ' 	+ ${productor.DireccionNominal}" />
+	<a href="/productor">Ingresar un nuevo valor</a>
+	<a href="/productor/list"></a>
+</body>
+</html>
