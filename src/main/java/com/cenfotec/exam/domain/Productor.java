@@ -1,5 +1,8 @@
 package com.cenfotec.exam.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 
 public class Productor {
@@ -12,6 +15,7 @@ public class Productor {
 	private String canton;
 	private String distrito;
 	private String direccionNominal;
+	private List<String> fincas = new ArrayList<String>();
 	// Constructores
 	public Productor() {}
 	// Getters & Setters
@@ -63,5 +67,15 @@ public class Productor {
 	public void setDireccionNominal(String direccionNominal) {
 		this.direccionNominal = direccionNominal;
 	}
+	public List<String> getFincas() {
+		return fincas;
+	}
+	public void setFincas(List<String> fincas) {
+		this.fincas = fincas;
+	}
+	public void addFinca(String fincaId) {
+		this.fincas.add(fincaId);
+	}
+	
 	
 }

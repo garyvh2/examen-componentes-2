@@ -1,44 +1,44 @@
 package com.cenfotec.exam.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 
 public class Finca {
 	@Id
-	private String Id;
-	private String Nombre;
-	private String Descripcion;
-	
+	private String id;
+	private String nombre;
+	private String descripcion;
+	private List<String> cafes = new ArrayList<String>();;
 	//Constructors
 	public Finca() {}
-	public Finca(String id, String nombre, String descripcion) {
-		Id = id;
-		Nombre = nombre;
-		Descripcion = descripcion;
-	}
-
 	// Getters & Setters
 	public String getId() {
-		return Id;
+		return id;
 	}
-	
 	public void setId(String id) {
-		Id = id;
+		this.id = id;
 	}
-	
 	public String getNombre() {
-		return Nombre;
+		return nombre;
 	}
-	
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		this.nombre = nombre;
 	}
-
 	public String getDescripcion() {
-		return Descripcion;
+		return descripcion;
 	}
-	
 	public void setDescripcion(String descripcion) {
-		Descripcion = descripcion;
+		this.descripcion = descripcion;
 	}
-
+	public List<String> getCafes() {
+		return cafes;
+	}
+	public void setCafes(List<String> cafes) {
+		this.cafes = cafes;
+	}
+	public void addCafes(String cafeId) {
+		this.cafes.add(cafeId);
+	}
 }

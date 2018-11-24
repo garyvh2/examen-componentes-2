@@ -12,13 +12,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.cenfotec.exam.domain.Finca;
 import com.cenfotec.exam.domain.Productor;
+import com.cenfotec.exam.repository.FincaRepository;
 import com.cenfotec.exam.repository.ProductorRepository;
 
 @Controller
 public class ProductorController {
 	@Autowired
 	ProductorRepository repository;
+	@Autowired
+	FincaRepository fincaRepository;
 	/**
 	 * Index
 	 */
@@ -77,6 +81,11 @@ public class ProductorController {
 	@RequestMapping("/productor/view/{id}")
 	public String viewProductor (@PathVariable String id, Model model) {
 		Productor productor = repository.findById(id).get();
+		Iterable<String> fincasIterable = productor.getFincas();
+		if (!productor.getFincas().isEmpty()) {
+			Iterable<Finca> fincas = fincaRepository.findAllById(fincasIterable);
+			model.addAttribute("fincas", fincas);
+		}
 		model.addAttribute("productor", productor);
 		return "viewProductor";
 	}

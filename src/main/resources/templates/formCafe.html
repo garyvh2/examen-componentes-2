@@ -7,12 +7,8 @@
 </head>
 <body>
 	<h1>Form Café</h1>
-	<form action="#" th:action="@{/cafe}" th:object="${cafe}"
+	<form action="#" th:action="${#httpServletRequest.requestURI}" th:object="${cafe}"
 		method="post">
-		<p>
-			<label>Id:</label>
-			<input type="text" th:field="*{id}" />
-		</p>
 		<p>
 			<label>Nombre:</label>
 			<input type="text" th:field="*{nombre}" />

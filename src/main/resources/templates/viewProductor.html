@@ -17,5 +17,22 @@
 	<p th:text="'Canton: ' 				+ ${productor.canton}" />
 	<p th:text="'Distrito: ' 			+ ${productor.distrito}" />
 	<p th:text="'Direccion Nominal: ' 	+ ${productor.direccionNominal}" />
+	<br>
+	<h2>Fincas</h2>
+	<ul>
+		<div th:each="entry,status : ${fincas}">
+			<li>
+				<h4>
+					<span th:text="${entry.id}">Id</span>
+				</h4>
+				<p>
+					<span th:text="${entry.nombre}">Nombre</span>
+				</p>
+				<a th:href="@{/productor/__${productor.id}__/finca/view/__${entry.id}__}"> <span>Ver</span></a>
+			</li>
+		</div>
+	</ul>
+	<br>
+	<a th:href="@{/productor/__${productor.id}__/finca}">Insertar una finca</a>
 </body>
 </html>
